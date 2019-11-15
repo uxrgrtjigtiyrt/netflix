@@ -7,32 +7,35 @@ width:100vw;
 `;
 
 const Logo=styled.img`
-height:75%;
+height:100%;
 `;
 
 
 const NavText=styled.ul`
-display:inline-flex;
-justify-content:center;
-align-items:center
+display:flex;
+color:white;
+list-style: none;
+height:100%;
+flex:1;
+align-items:center;
 `;
 
 const NavTextItem = styled.ul`
-color:white;
-margin-left:20px;
 `;
 
 const NavIcon = styled.ul`
-
+display:flex;
+list-style: none;
+height:100%;
 `;
 
 const NavIconItem=styled.ul`
-
+width:fit-content;
 `;
 
 const Banner=props=>{
     return <Wrapper>
-        <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png"/>
+        <Logo src="https://cdn.pixelprivacy.com/wp-content/uploads/2017/12/Netflix-Logo-1024x277.png"/>
         <NavText>
             <NavTextItem>홈</NavTextItem>
             <NavTextItem>TV 프로그램</NavTextItem>
