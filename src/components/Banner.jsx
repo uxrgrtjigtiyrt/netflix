@@ -27,6 +27,16 @@ const NavText = styled.ul`
 
 const NavTextItem = styled.li`
   margin-right: 20px;
+  font-weight:normal;
+  color:#e5e5e5;
+  :hover{
+      color:#b3b3b3;
+      font-weight:normal;
+  }
+  :active{
+      font-weight:bold;
+      color:#000;
+  }
 `;
 
 const NavIcon = styled.ul`
@@ -34,6 +44,7 @@ const NavIcon = styled.ul`
   list-style: none;
 
   height: 100%;
+  
 `;
 
 const NavIconItem = styled.li`
