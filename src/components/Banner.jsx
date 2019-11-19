@@ -42,7 +42,6 @@ const NavTextItem = styled.li`
 const NavIcon = styled.ul`
   display: flex;
   list-style: none;
-
   height: 100%;
   
 `;
