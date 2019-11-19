@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 68px;
   display: flex;
   padding: 20px 58px;
@@ -27,23 +27,22 @@ const NavText = styled.ul`
 
 const NavTextItem = styled.li`
   margin-right: 20px;
-  font-weight:normal;
-  color:#e5e5e5;
-  :hover{
-      color:#b3b3b3;
-      font-weight:normal;
+  color: #e5e5e5;
+  &:hover {
+    color: #b3b3b3;
   }
-  :active{
-      font-weight:bold;
-      color:#000;
+
+  &.select {
+    color: white;
+    font-weight: bold;
   }
 `;
 
 const NavIcon = styled.ul`
   display: flex;
   list-style: none;
+
   height: 100%;
-  
 `;
 
 const NavIconItem = styled.li`
@@ -59,7 +58,7 @@ const Banner = props => {
     <Wrapper>
       <Logo src="https://cdn.pixelprivacy.com/wp-content/uploads/2017/12/Netflix-Logo-1024x277.png" />
       <NavText>
-        <NavTextItem>홈</NavTextItem>
+        <NavTextItem className="select">홈</NavTextItem>
         <NavTextItem>TV 프로그램</NavTextItem>
         <NavTextItem>영화</NavTextItem>
         <NavTextItem>최신 등록 콘텐츠</NavTextItem>
