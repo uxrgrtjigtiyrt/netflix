@@ -4,6 +4,11 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   color: white;
   overflow-x: hidden;
+  position:absolute;
+  left:0;
+  right:0;
+  z-index:-1;
+  top:0;
   & > img {
     width: 100%;
   }
@@ -25,7 +30,6 @@ const Detail = styled.div`
 `;
 
 const ButtonGroup = styled.div`
-  /* width: 100%; */
   display: flex;
 `;
 
