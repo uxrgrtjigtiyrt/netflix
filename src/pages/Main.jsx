@@ -10,7 +10,7 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div style={{marginTop:"48%"}}>
+      <div style={{marginTop:"43%",overflowX:"hidden",width:"100%"}}>
         <Banner />
         <Preview />
         <MovieContainer />
