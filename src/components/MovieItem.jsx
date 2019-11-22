@@ -26,7 +26,7 @@ const Wrapper=styled.div`
 
 const MovieItem=(props)=>{
     return(
-        <Wrapper><div>MovieItem</div></Wrapper>
+        <Wrapper><div>{props.title}</div></Wrapper>
     )
 }
 

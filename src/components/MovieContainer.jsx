@@ -60,13 +60,13 @@ const MovieContainer = props => {
   };
   return (
     <Wrapper transform={(page - 1) * (sliderWidth + 10)}>
-      <div className="title">TV 프로그램 ∙ 코미디</div>
+      <div className="title">{props.title}</div>
       <div className="container">
         <BtnLeft onClick={onClickLeft}>{"<"}</BtnLeft>
         <BtnRight onClick={onClickRight}>></BtnRight>
         <div className="slider" ref={slider}>
-          {[...Array(15).keys()].map(value => (
-            <Movieitem title={value} />
+          {(props.movies||[]).map((value,idx) => (
+            <Movieitem key={idx} title={value.title} />
           ))}
         </div>
       </div>

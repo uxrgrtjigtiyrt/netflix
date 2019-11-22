@@ -13,7 +13,8 @@ class Main extends React.Component {
       <div style={{marginTop:"43%",overflowX:"hidden",width:"100%"}}>
         <Banner />
         <Preview />
-        <MovieContainer />
+        <MovieContainer title="TV프로그램" movies={[{title: "신서유기7"},{title: "신서유기6"},{title: "신서유기5"},{title: "신서유기4"},{title: "신서유기3"},{title: "신서유기2"},{title: "신서유기1"}]} />
+        <MovieContainer title="드라마" movies={[{title: "인생"},{title: "타인은 지옥이다"},{title: "동백꽃 필 무렵"}]} />
       </div>
     );
   }
