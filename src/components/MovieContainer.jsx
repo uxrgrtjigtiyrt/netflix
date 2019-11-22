@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   color: white;
   margin: 0 auto;
   width: calc(100% - (${BtnSize} + ${BtnSize}));
+  margin-bottom:100px;
   overflow: visible;
   div.title {
     color: white;
