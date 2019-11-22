@@ -20,6 +20,14 @@ const Wrapper=styled.div`
         justify-content:center;
         align-items:center;
     }
+    &:hover{
+        width:21%;
+        
+        height:1vh;
+        
+        transition:0.5s;
+        bottom:0.5vh;
+    }
 `;
 
 
