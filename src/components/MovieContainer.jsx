@@ -59,7 +59,7 @@ const MovieContainer = props => {
     setPage(page + 1);
   };
   return (
-    <Wrapper transform={(page - 1) * (sliderWidth + 10)}>
+    <Wrapper transform={(page - 1) * (sliderWidth + 90)}>
       <div className="title">{props.title}</div>
       <div className="container">
         <BtnLeft onClick={onClickLeft}>{"<"}</BtnLeft>

@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper=styled.div`
-    width:calc(20% - 8px);
+    width:calc(20% - 12px);
     padding-bottom:10%;
     height:0;
     position:relative;
-    margin-right:10px;
+    margin-right:30px;
     
     &>div{
         position: absolute;
@@ -26,7 +26,6 @@ const Wrapper=styled.div`
         height:1vh;
         
         transition:0.5s;
-        bottom:0.5vh;
     }
 `;
 
