@@ -1,39 +1,36 @@
-import React from "react";
-import styled from "styled-components";
+import * as React from "react";
+import styled from "styled-components"
 
-const Wrapper=styled.div`
-    width:calc(20% - 12px);
+const Wrapper = styled.div`
+    color:white;
+    width:calc(20% - 8px);
     padding-bottom:10%;
+    margin-right:10px;
     height:0;
     position:relative;
-    margin-right:30px;
-    
+    transition:0.2s;
     &>div{
-        position: absolute;
+        position:absolute;
         left:0;
         right:0;
-        bottom:0;
         top:0;
-        background-color:#aaa;
-
+        bottom:0;
         display:flex;
         justify-content:center;
         align-items:center;
     }
     &:hover{
-        width:21%;
-        
-        height:1vh;
-        
-        transition:0.5s;
+        transform: scale(1.1);
+        z-index:100;
     }
-`;
+`
 
-
-
-const MovieItem=(props)=>{
-    return(
-        <Wrapper><div>{props.title}</div></Wrapper>
+const MovieItem = (props) => {
+    return (
+        <Wrapper>
+            <img src={props.imgs} width="100%" padding-botton="100%" />
+            <div>{props.title}</div>
+        </Wrapper>
     )
 }
 
