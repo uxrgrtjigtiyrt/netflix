@@ -1,53 +1,49 @@
 import React from "react";
-import Banner from "../components/Banner";
 import Preview from "../components/Preview";
 import MovieContainer from "../components/MovieContainer";
+import styled from "styled-components";
 import axios from "axios";
+import Banner from "../components/Banner";
+import withLayout from "../components/withLayout";
 
+const MovieContainerWrapper = styled.div`
+  & > *:not(:last-child) {
+    margin-bottom: 25px;
+  }
+`;
 class Main extends React.Component {
   constructor(props) {
     super(props);
-    this.state={
-      movies:[],
-      movies2:[]
-    }
+    this.state = {
+      movies: []
+    };
   }
 
-  componentDidMount(){
-    const response=axios.get("https://api.themoviedb.org/3/movie/popular?api_key=a36305ddf529faa0c37acbf47e633d08&language=ko-kr")
-    .then(response =>{
-      this.setState({movies: response.data.results})
-    })
-    .catch(err=>{
-      console.log("err!!",err);
-    })
-    const response2=axios.get("https://api.themoviedb.org/3/trending/movie/week?api_key=a36305ddf529faa0c37acbf47e633d08&language=ko-kr")
-    .then(response2 =>{
-      this.setState({movies2: response2.data.results})
-    })
-    .catch(err=>{
-      console.log("err!!",err);
-    })
-    const response3=axios.get("https://api.themoviedb.org/3/movie/top_rated?api_key=a36305ddf529faa0c37acbf47e633d08&language=ko-kr")
-    .then(response3 =>{
-      this.setState({movies3: response3.data.results})
-    })
-    .catch(err=>{
-      console.log("err!!",err);
-    })
+  componentDidMount() {
+    axios
+      .get(
+        "https://api.themoviedb.org/3/movie/popular?api_key=a36305ddf529faa0c37acbf47e633d08&language=ko-kr"
+      )
+      .then(response => {
+        console.log(response);
+        this.setState({ movies: response.data.results });
+      })
+      .catch(err => {
+        console.log("err!!", err);
+      });
   }
 
   render() {
     return (
-      <div style={{marginTop:"43%",overflowX:"hidden",width:"100%"}}>
-        <Banner />
+      <>
         <Preview />
-        <MovieContainer title="TV프로그램" movies={this.state.movies} />
-        <MovieContainer title="드라마" movies={this.state.movies2} />
-        <MovieContainer title="드라마" movies={this.state.movies3} />
-      </div>
+        <MovieContainerWrapper
+          style={{ marginTop: "45%", overflowX: "hidden", width: "100%" }}
+        >
+          <MovieContainer title="TV프로그램" movies={this.state.movies} />
+        </MovieContainerWrapper>
+      </>
     );
   }
 }
-
-export default Main;
+export default withLayout(Main);
