@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   position: relative;
   margin-right: 10px;
   transition: 0.3s;
+  z-index:90;
   & > div {
     position: absolute;
     left: 0;
@@ -18,6 +19,9 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  &>div>span{
+    z-index:0;
   }
   & > img {
     position: absolute;
@@ -32,16 +36,19 @@ const Wrapper = styled.div`
     align-items: center;
   }
   &:hover {
-    transform: scale(1.05);
-    z-index:100000;
-    transition:0.01s;
+    transform: scale(1.1);
+    z-index:100;
+    transition:0.5s;
+  }
+  &:hover&>div>span{
+    z-index:101;
   }
 `;
 
 const MovieItem = props => {
   return (
     <Wrapper>
-      <div>{props.title}</div>
+      <div><span>{props.title}</span></div>
       <img
         src={"http://image.tmdb.org/t/p/w185" + props.backdrop_path}
         alt=""

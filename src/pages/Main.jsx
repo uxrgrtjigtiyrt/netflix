@@ -38,7 +38,7 @@ class Main extends React.Component {
       <>
         <Preview />
         <MovieContainerWrapper
-          style={{ marginTop: "45%", overflowX: "hidden", width: "100%" }}
+          style={{ marginTop: "45%", overflowX: "hidden", overflowY:"hidden", width: "100%" }}
         >
           <MovieContainer title="TV프로그램" movies={this.state.movies} />
         </MovieContainerWrapper>
