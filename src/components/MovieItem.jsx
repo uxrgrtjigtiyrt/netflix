@@ -32,7 +32,10 @@ const Wrapper = styled.div`
     align-items: center;
   }
   &:hover {
-    transform: scale(1.1);
+    overflow-y:hidden;
+    transform: scale(1.05);
+    z-index:100000;
+    transition:0.01s;
   }
 `;
 
